@@ -1,0 +1,547 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  overflow-x: hidden;
+  color: #000;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+
+a {
+  color: #000;
+}
+
+h2, h3 {
+  font-weight: normal;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: '';
+}
+
+/* header */
+header {
+  width: 100%;
+  height: 100vh;
+}
+
+header .header-wrapper {
+  height: 60px;
+  overflow: hidden;
+  line-height: 60px;
+}
+
+header .header-wrapper h1 {
+  float: left;
+  font-size: 2.0rem;
+}
+
+header .header-wrapper ul {
+  float: right;
+}
+
+header .header-wrapper ul li {
+  display: inline-block;
+}
+
+header .header-wrapper ul li a {
+  display: block;
+  padding: 0 10px;
+  font-size: 1.4rem;
+}
+
+header .main-image {
+  width: 100%;
+  height: calc(100% - 60px);
+  background-image: url("flower.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header .sp-menu {
+  display: none;
+}
+
+.about {
+  padding: 70px 0;
+  overflow: hidden;
+  background-color: #fde8f5;
+}
+
+.about .about-left {
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+
+.about .about-left h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: 6rem;
+}
+
+.about .about-left .main-desc {
+  padding: 20px 20px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 26px;
+}
+
+.about .about-left .desc {
+  padding: 0 80px 20px;
+  font-size: 1.6rem;
+  line-height: 24px;
+}
+
+.about .about-left a.more {
+  display: block;
+  position: relative;
+  width: 200px;
+  margin: 0 auto;
+  padding: 10px 0;
+  border: 1px solid #000;
+  background-color: #fff;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.about .about-left a.more::after {
+  position: absolute;
+  top: 13px;
+  right: 20px;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
+  content: '';
+}
+
+.about .about-image {
+  width: 50%;
+  height: 250px;
+  float: left;
+  background-image: url("photo1-min.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.intro {
+  padding: 100px 0;
+}
+
+.intro .intro-desc-wrapper .intro-image-wrapper {
+  width: 50%;
+  height: 300px;
+  float: left;
+}
+
+.intro .intro-desc-wrapper .intro-image-wrapper .intro-image {
+  width: 450px;
+  height: 300px;
+  background-image: url("photo2-min.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 5px 5px #ccc;
+}
+
+.intro .intro-desc-wrapper .intro-desc {
+  width: 50%;
+  float: left;
+  text-align: right;
+}
+
+.intro .intro-desc-wrapper .intro-desc .title-box {
+  z-index: -1;
+  position: relative;
+  margin: 0 0 0 -200%;
+  padding: 0 0 0 200%;
+  border-bottom: 3px solid #ccc;
+}
+
+.intro .intro-desc-wrapper .intro-desc .title-box .intro-title {
+  padding-bottom: 20px;
+  font-family: "Dancing Script", cursive;
+  font-size: 5.0rem;
+}
+
+.intro .intro-desc-wrapper .intro-desc .main-desc {
+  padding: 20px 0px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 26px;
+}
+
+.intro .intro-desc-wrapper .intro-desc .desc {
+  padding: 0 0px 20px;
+  font-size: 1.6rem;
+  line-height: 24px;
+  text-align: left;
+}
+
+.intro .intro-desc-wrapper .intro-desc a.more {
+  display: block;
+  position: relative;
+  width: 200px;
+  margin: 0 auto;
+  padding: 10px 0;
+  border: 1px solid #000;
+  background-color: #fff;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.intro .intro-desc-wrapper .intro-desc a.more::after {
+  position: absolute;
+  top: 13px;
+  right: 20px;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
+  content: '';
+}
+
+.intro .intro-bottom {
+  margin-top: 100px;
+}
+
+.intro .intro-bottom .intro-image-wrapper {
+  float: right;
+}
+
+.intro .intro-bottom .intro-image-wrapper .intro-image {
+  float: right;
+  background-image: url("photo3-min.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.intro .intro-bottom .intro-desc {
+  float: left;
+  text-align: left;
+}
+
+.intro .intro-bottom .intro-desc .title-box {
+  margin: 0 -100% 0 -100%;
+  padding: 0 100% 0 100%;
+}
+
+.case {
+  padding-bottom: 100px;
+  overflow: hidden;
+}
+
+.case .case-left {
+  width: 60%;
+  float: left;
+}
+
+.case .case-left h2 {
+  margin-bottom: 10px;
+  font-family: "Dancing Script", cursive;
+  font-size: 7.0rem;
+}
+
+.case .case-left .main-desc {
+  padding: 20px 0px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 26px;
+}
+
+.case .case-left .desc {
+  padding: 0 0px 20px;
+  font-size: 1.6rem;
+  line-height: 24px;
+}
+
+.case .case-right {
+  width: 300px;
+  height: 400px;
+  float: right;
+  background-image: url("photo5-min.jpeg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content {
+  width: 100%;
+  height: 400px;
+  padding-top: 50px;
+  background-image: url("photo6-min.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content .content-box {
+  max-width: 450px;
+  height: 300px;
+  padding: 30px 40px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.content .content-box h3 {
+  margin-bottom: 20px;
+  font-size: 3.0rem;
+}
+
+.content .content-box .desc {
+  margin-bottom: 20px;
+  padding: 0;
+  font-size: 1.6rem;
+  line-height: 24px;
+  text-align: left;
+}
+
+.content .content-box a {
+  display: block;
+  position: relative;
+  width: 200px;
+  margin: 0 auto;
+  padding: 10px 0;
+  border: 1px solid #000;
+  background-color: #fff;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.content .content-box a::after {
+  position: absolute;
+  top: 13px;
+  right: 20px;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
+  content: '';
+}
+
+.news {
+  padding: 100px 0;
+}
+
+.news .news-wrapper {
+  margin: 0 0 0 -100%;
+  margin-right: 200px;
+  padding: 0 0 0 100%;
+  border: 3px solid #ccc;
+}
+
+.news .news-wrapper ul {
+  position: relative;
+  padding: 50px 0 30px;
+}
+
+.news .news-wrapper ul h2 {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  font-family: "Dancing Script", cursive;
+  font-size: 7.0rem;
+}
+
+.news .news-wrapper ul li {
+  margin-bottom: 10px;
+}
+
+.news .news-wrapper ul li a {
+  font-size: 1.8rem;
+}
+
+footer {
+  width: 100%;
+  height: 200px;
+  background-color: #6a5750;
+  color: #fff;
+}
+
+footer .footer-wrapper {
+  padding: 50px 0;
+  overflow: hidden;
+}
+
+footer .footer-wrapper .footer-left {
+  width: 60%;
+  float: left;
+}
+
+footer .footer-wrapper .footer-left h1 {
+  font-size: 2.0rem;
+}
+
+footer .footer-wrapper .footer-left ul {
+  margin-top: 25px;
+}
+
+footer .footer-wrapper .footer-left ul li {
+  display: inline-block;
+  font-size: 1.4rem;
+}
+
+footer .footer-wrapper .footer-left ul li a {
+  color: #fff;
+}
+
+footer .footer-wrapper .footer-right {
+  width: 40%;
+  float: right;
+}
+
+footer .footer-wrapper .footer-right a {
+  display: block;
+  position: relative;
+  width: 200px;
+  margin: 0 auto;
+  padding: 10px 0;
+  border: 1px solid #000;
+  background-color: #fff;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+footer .footer-wrapper .footer-right a::after {
+  position: absolute;
+  top: 13px;
+  right: 20px;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
+  content: '';
+}
+
+footer .copy {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+@media (max-width: 959px) {
+  .container {
+    padding: 0 10px;
+  }
+  header {
+    position: relative;
+  }
+  header .header-wrapper {
+    position: absolute;
+    top: 0;
+    left: 10px;
+  }
+  header .header-wrapper ul {
+    display: none;
+  }
+  header .sp-menu {
+    display: block;
+    z-index: 10;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    line-height: 60px;
+    text-align: center;
+  }
+  header .sp-menu ul {
+    overflow: hidden;
+  }
+  header .sp-menu ul li {
+    width: 20%;
+    float: left;
+  }
+  header .sp-menu ul li a {
+    display: block;
+    font-size: 1.4rem;
+  }
+  .about {
+    padding: 30px 0;
+  }
+  .about .about-left {
+    width: 100%;
+    float: none;
+  }
+  .about .about-left .main-desc {
+    padding: 20px 4px;
+  }
+  .about .about-left .desc {
+    padding: 0 4px 20px;
+  }
+  .about .about-image {
+    width: auto;
+    margin: 20px 30px 0;
+    float: none;
+  }
+  .intro {
+    padding: 70px 0;
+  }
+  .intro .intro-desc-wrapper .intro-image-wrapper {
+    width: auto;
+    float: none;
+  }
+  .intro .intro-desc-wrapper .intro-image-wrapper .intro-image {
+    width: auto;
+  }
+  .intro .intro-desc-wrapper .intro-desc {
+    width: auto;
+    float: none;
+  }
+  .intro .intro-desc-wrapper .intro-desc .title-box {
+    margin: 0;
+    padding: 0;
+  }
+  .intro .intro-bottom .intro-image-wrapper .intro-image {
+    width: 100%;
+  }
+  .case .case-left {
+    width: auto;
+    float: none;
+  }
+  .case .case-right {
+    width: auto;
+    float: none;
+  }
+  .content .content-box {
+    padding: 20px 10px;
+  }
+  .content .content-box h3 {
+    font-size: 2.0rem;
+  }
+  .news .news-wrapper {
+    margin-right: 0;
+  }
+  footer {
+    margin-bottom: 60px;
+  }
+  footer .footer-wrapper {
+    padding: 40px 0;
+  }
+  footer .footer-wrapper .footer-left {
+    width: auto;
+    float: none;
+  }
+  footer .footer-wrapper .footer-left ul {
+    display: none;
+  }
+  footer .footer-wrapper .footer-right {
+    margin-top: 10px;
+    float: left;
+  }
+}
