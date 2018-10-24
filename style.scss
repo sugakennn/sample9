@@ -1,0 +1,446 @@
+
+//スマホ対応
+
+
+$base-color: #EB34A8;
+$main-color: #fde8f5;
+$main-font: 'Dancing Script', cursive;
+
+@mixin main-desc($padding) {
+  font-weight: bold;
+  font-size: 1.8rem;
+  padding: $padding;
+  line-height: 26px;
+}
+
+@mixin desc($padding) {
+  font-size: 1.6rem;
+  padding: $padding;
+  line-height: 24px;
+}
+
+@mixin btn($width: 200px) {
+  display: block;
+  width: $width;
+  padding: 10px 0;
+  border: 1px solid #000;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #fff;
+  font-size: 1.6rem;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 13px;
+    right: 20px;
+    width: 10px;
+    height: 10px;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    transform: rotate(45deg);
+  }
+}
+
+@mixin image($url) {
+  background: {
+    image: url($url);
+    repeat: no-repeat;
+    position: center center;
+    size: cover;
+  }
+}
+
+//スマホ用メディアクエリ
+@mixin media ($width-media: 959px) {
+  @media (max-width: $width-media) {
+    @content;
+  }
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  color: #000;
+  overflow-x: hidden;
+}
+
+a {
+  color: #000;
+}
+
+h2, h3 {
+  font-weight: normal;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  @include media() {
+    padding: 0 10px;
+  }
+}
+
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* header */
+header {
+  width: 100%;
+  height: 100vh;
+  @include media() {
+    position: relative;
+  }
+  .header-wrapper {
+    height: 60px;
+    line-height: 60px;
+    overflow: hidden;
+    @include media() {
+      position: absolute;
+      top: 0;
+      left: 10px;
+    }
+    h1 {
+      float: left;
+      font-size: 2.0rem;
+    }
+    ul {
+      float: right;
+      @include media() {
+        display: none;
+      }
+      li {
+        display: inline-block;
+        a {
+          font-size: 1.4rem;
+          display: block;
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+  .main-image {
+    width: 100%;
+    height: calc(100% - 60px);
+    @include image('flower.jpg');
+    
+  }
+  .sp-menu {
+    display: none;
+    @include media() {
+      display: block;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      z-index: 10;
+      ul {
+        overflow: hidden;
+        li {
+          float: left;
+          width: 20%;
+          a {
+            font-size: 1.4rem;
+            display: block;
+
+          }
+        }
+      }
+    }
+  }
+}
+
+.about {
+  padding: 70px 0;
+  background-color: $main-color;
+  overflow: hidden;
+  @include media() {
+    padding: 30px 0;
+  }
+  .about-left {
+    float: left;
+    width: 50%;
+    text-align: center;
+    @include media() {
+      float: none;
+      width: 100%;
+    }
+    h2 {
+      font-family: $main-font;
+      font-size: 6rem;
+    }
+    .main-desc {
+      @include main-desc($padding: 20px 20px);
+      @include media() {
+        padding: 20px 4px;
+      }
+    }
+    .desc {
+      @include desc($padding: 0 80px 20px);
+      @include media() {
+        padding: 0 4px 20px;
+      }
+    }
+    a.more {
+      @include btn();
+    }
+  }
+  .about-image {
+    float: left;
+    width: 50%;
+    height: 250px;
+    @include image('photo1-min.jpg');
+    @include media() {
+      float: none;
+      width: auto;
+      margin: 20px 30px 0;
+    }
+  }
+}
+
+.intro {
+  padding: 100px 0;
+  @include media() {
+    padding: 70px 0;
+  }
+  .intro-desc-wrapper {
+    .intro-image-wrapper {
+      float: left;
+      width: 50%;
+      height: 300px;
+      @include media() {
+        float: none;
+        width: auto;
+      }
+      .intro-image {
+        width: 450px;
+        height: 300px;
+        @include image('photo2-min.jpg');
+        box-shadow: 5px 5px #ccc;
+        @include media() {
+          width: auto;
+        }
+      }
+    }
+    .intro-desc {
+      float: left;
+      width: 50%;
+      text-align:right;
+      @include media() {
+        float: none;
+        width: auto;
+      }
+      .title-box {
+        margin: 0 0 0 -200%;
+        padding: 0 0 0 200%;
+        border-bottom: 3px solid #ccc;
+        position: relative;
+        z-index: -1;
+        @include media() {
+          margin: 0;
+          padding: 0;
+        }
+        .intro-title {
+          font-family: $main-font;
+          font-size: 5.0rem;
+          padding-bottom: 20px;
+        }
+      }
+      .main-desc {
+        @include main-desc($padding: 20px 0px);
+      }
+      .desc {
+        @include desc($padding: 0 0px 20px);
+        text-align: left;
+      }
+      a.more {
+        @include btn();
+      }
+    }
+  }
+  .intro-bottom {
+    margin-top: 100px;
+    .intro-image-wrapper {
+      float: right;
+      .intro-image {
+        float: right;
+        @include image('photo3-min.jpg');
+        @include media() {
+          width: 100%;
+        }
+      }
+    }
+    .intro-desc {
+      float: left;
+      text-align: left;
+
+      .title-box {
+        margin: 0 -100% 0 -100%;
+        padding: 0 100% 0 100%;
+      }
+    }
+  }
+}
+
+.case {
+  overflow: hidden;
+  padding-bottom: 100px;
+  .case-left {
+    float: left;
+    width: 60%;
+    @include media() {
+      float: none;
+      width: auto;
+    }
+    h2 {
+      font-family: $main-font;
+      font-size: 7.0rem;
+      margin-bottom: 10px;
+    }
+    .main-desc {
+      @include main-desc($padding: 20px 0px);
+    }
+    .desc {
+      @include desc($padding: 0 0px 20px);
+    }
+  }
+  .case-right {
+    float: right;
+    width: 300px;
+    height: 400px;
+    @include image('photo5-min.jpeg');
+    @include media() {
+      float: none;
+      width: auto;
+    }
+  }
+}
+
+.content {
+  width: 100%;
+  height: 400px;
+  padding-top: 50px;
+  @include image('photo6-min.jpg');
+  .content-box {
+    max-width: 450px;
+    height: 300px;
+    background-color: #fff;
+    text-align: center;
+    padding: 30px 40px;
+    @include media() {
+      padding: 20px 10px;
+    }
+    h3 {
+      font-size: 3.0rem;
+      margin-bottom: 20px;
+      @include media() {
+        font-size: 2.0rem;
+      }
+    }
+    .desc {
+      @include desc($padding: 0);
+      text-align: left;
+      margin-bottom: 20px;
+    }
+    a {
+      @include btn;
+    }
+  }
+}
+
+.news {
+  padding: 100px 0;
+  .news-wrapper {
+    margin: 0 0 0 -100%;
+    padding: 0 0 0 100%;
+    border: 3px solid #ccc;
+    margin-right: 200px;
+    @include media() {
+      margin-right: 0;
+    }
+    ul {
+      padding: 50px 0 30px;
+      position: relative;
+      h2 {
+        font-family: $main-font;
+        font-size: 7.0rem;
+        position: absolute;
+        top: -30px;
+        left: 0;
+      }
+      li {
+        margin-bottom: 10px;
+        a {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  height: 200px;
+  background-color: #6a5750;
+  color: #fff;
+  @include media() {
+    margin-bottom: 60px;
+  }
+  .footer-wrapper {
+    overflow: hidden;
+    padding: 50px 0;
+    @include media() {
+      padding: 40px 0;
+    }
+    .footer-left {
+      float: left;
+      width: 60%;
+      @include media() {
+        float: none;
+        width: auto;
+      }
+      h1 {
+        font-size: 2.0rem;
+      }
+      ul {
+        margin-top: 25px;
+        @include media() {
+          display: none;
+        }
+        li {
+          display: inline-block;
+          font-size: 1.4rem;
+          a {
+            color: #fff;
+          }
+        }
+      }
+    }
+    .footer-right {
+      float: right;
+      width: 40%;
+      @include media() {
+        float: left;
+        margin-top: 10px;
+        }
+      a {
+        @include btn();
+      }
+    }
+  }
+  .copy {
+    text-align: center;
+    font-size: 1.2rem;
+
+  }
+}
