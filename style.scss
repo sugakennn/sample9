@@ -229,6 +229,7 @@ header {
         box-shadow: 5px 5px #ccc;
         @include media() {
           width: auto;
+          background-position: unset;
         }
       }
     }
