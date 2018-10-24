@@ -498,6 +498,7 @@ footer .copy {
   }
   .intro .intro-desc-wrapper .intro-image-wrapper .intro-image {
     width: auto;
+    background-position: unset;
   }
   .intro .intro-desc-wrapper .intro-desc {
     width: auto;
